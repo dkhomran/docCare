@@ -9,6 +9,40 @@
   --border: 1px solid var(--blue);
 }
 
+.loading {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ccdbe4;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.loading i {
+  font-size: 34px;
+  color: var(--black);
+  letter-spacing: 4px;
+  animation: loading-txt;
+  -webkit-animation: loading 1.5s linear infinite;
+}
+
+@keyframes loading {
+  100% {
+    transform: rotate(360deg) scale(1.2);
+    -webkit-transform: rotate(360deg) scale(1.2);
+    -moz-transform: rotate(360deg) scale(1.2);
+    -ms-transform: rotate(360deg) scale(1.2);
+    -o-transform: rotate(360deg) scale(1.2);
+    color: rgb(170, 62, 147);
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
